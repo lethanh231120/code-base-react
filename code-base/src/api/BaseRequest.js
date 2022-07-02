@@ -15,10 +15,10 @@ if (token) {
 }
 
 const get = async(url, params = {}) => {
-  const token = getCookie(STORAGEKEY.ACCESS_TOKEN)
-  if (token) {
-    instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
-  }
+  // const token = getCookie(STORAGEKEY.ACCESS_TOKEN)
+  // if (token) {
+  //   instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  // }
   try {
     const config = { params: params }
     const response = await instance.get(getUrlPrefix() + url, config)

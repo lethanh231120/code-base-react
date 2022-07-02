@@ -5,14 +5,18 @@ import { useDispatch, useSelector } from 'react-redux'
 const Blogs = () => {
   const dispatch = useDispatch()
   const { blogs } = useSelector(state => state.blogs)
-
+  let listBlog = []
   useEffect(() => {
-    dispatch(getBlogs({ page: 1, pageSize: 2 }))
+    dispatch(getBlogs({ page: 1, pageSize: 10 }))
   }, [])
 
-  console.log(blogs)
+  if (blogs.blogs) {
+    listBlog = blogs.blogs
+  }
   return (
-    <div>index</div>
+    <div>
+      {listBlog && listBlog.map((item) => (<div key={item._id}>{item.title}</div>))}
+    </div>
   )
 }
 export default Blogs
