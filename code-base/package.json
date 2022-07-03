@@ -54,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.10.0",
+    "eslint": "^8.19.0",
     "eslint-plugin-react": "^7.29.2",
     "husky": "^7.0.4"
   }
