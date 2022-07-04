@@ -1,6 +1,56 @@
-# Getting Started with Create React App
+# DESCEN SPACE FRONT END DOCS
+
+## Libaries and technologies: 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Libraries: React-router-dom (for navigate), Redux + Redux-toolkits( for state mangement), Axios (Apis), Antd + SASS(UI),... 
+
+## Coding Convetion:
+Tool: ESLINT. More information: [Here](https://viblo.asia/p/hay-su-dung-eslint-cho-du-an-cua-ban-bJzKm07O59N)
+
+## React folders:**
+`api:` as known as services. Contain functions **POST**, **GET**, **PUT**, **PATCH**, **DELETE** by axios,...
+`App.js:` contain App Component
+
+`assets:` contain images,videos,sound files,...
+
+`components:` contain component folders. Each folder contains component files. Each file has used for a certain fuction block
+
+`layouts:` contain recycle UI blocks, such as: Header,Footer,..
+
+`pages:` contain Web's pages, created by `layouts` and `components`
+
+`redux:`
+
+`utils:` utility class that makes it easier to manipulate logic
+
+`Router.js:` base file for r-r-d to manage page navigation
+
+`store.js:` store RootReducer
+
+## Utils
+Provide Access Token, **METHODS** to get Token and cookies handle
+
+## Methods To Apis Handle ( /src/api )
+### ../BaseRequest.js:
+A valid Access token will be written to the Bearer token. Bearer token is the value in the Authorization header of each http request.
+
+Authorization header is a component of JWT (including 3 components: Header(1) , Payload(2) - contains user's descriptions: userID, name,… and Signature(3))
+
+For APIs that require user permissions, the SPA will check in the cookie if there is a JWT payload that will process the request, otherwise it will back to login.
+
+**Handle Api Function :** An async function, use Try Catch Await Function to handle Error during coding process. 
+`POST Method:` Post new data to Api. Take 2 parameters: Api address and new Data ( Object Form or other data,such as: images,videos,...) 
+
+`GET Method:` Get data from Api. Take 2 parameters: Api address and params( Usually added to Api)
+
+`PUT Method` and `PATCH Method:` Update data to Api. Take 2 parameters: Api address and new Data.
+
+`DELETE Method:` Delete data. Take 2 parameters: Api and data
+
+**Different from PUT and PATCH method:** 
+When using PUT method, you must send a full field data form. If only a certain number of fields are sent, the remaining fields will be deleted ( null ). With PATCH method: Change only those fields that are required to be replaced for the sake of the entire record.
 
 ## Available Scripts
 
@@ -39,32 +89,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
