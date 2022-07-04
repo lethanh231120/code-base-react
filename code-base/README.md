@@ -91,4 +91,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Set up project with Docker
 
+`Step 1:` Clone project at address https://github.com/lethanh231120/code-base-react.git
+
+`Step 2:` Open cmd ( on Window ) or Terminal ( on MacOS )
+
+`Step 3:` ``` docker build .```
+
+`Step 4:` ``` docker images ``` to get ```${image's ID}```
+
+`Step 5:` ``` docker run -p ${PORT}:${PORT} ${image's ID}```
