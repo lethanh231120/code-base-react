@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Menu } from 'antd'
 import { NavLink } from 'react-router-dom'
 import { Layout } from 'antd'
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.min.css'
 const { Header } = Layout
 
 const items = [

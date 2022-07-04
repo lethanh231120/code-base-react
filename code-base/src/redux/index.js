@@ -1,7 +1,7 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from '@reduxjs/toolkit'
 
-import blogSlice from "./blogSlice";
+import blogSlice from './blogSlice'
 
 export default combineReducers({
-  blogs: blogSlice,
-});
+  blogs: blogSlice
+})
