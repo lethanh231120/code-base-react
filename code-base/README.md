@@ -10,7 +10,7 @@ Libraries: React-router-dom (for navigate), Redux + Redux-toolkits( for state ma
 Tool: ESLINT. More information: [Here](https://viblo.asia/p/hay-su-dung-eslint-cho-du-an-cua-ban-bJzKm07O59N)
 
 ## React folders:
-`api:` as known as services. Contain functions **POST**, **GET**, **PUT**, **PATCH**, **DELETE** by axios,...
+`api:` as known as services. Contain functions **POST**, **GET**, **PUT**, **PATCH**, **DELETE** by AXIOS,...
 
 `App.js:` contain App Component
 
