@@ -11,6 +11,7 @@ Tool: ESLINT. More information: [Here](https://viblo.asia/p/hay-su-dung-eslint-c
 
 ## React folders:
 `api:` as known as services. Contain functions **POST**, **GET**, **PUT**, **PATCH**, **DELETE** by axios,...
+
 `App.js:` contain App Component
 
 `assets:` contain images,videos,sound files,...
