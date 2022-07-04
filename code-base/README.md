@@ -1,10 +1,10 @@
 # DESCEN SPACE FRONT END DOCS
 
-## Libraies and technologies: 
+## Libraries and technologies: 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Libraries: React-router-dom (for navigate), Redux + Redux-toolkits( for state mangement), Axios (Apis), Antd + SASS(UI),... 
+Libraries: React-router-dom (for navigate), Redux + Redux-toolkits(for state mangement), Axios (Apis), Antd + SASS(UI),... 
 
 ## Coding Convetion:
 Tool: ESLINT. More information: [Here](https://viblo.asia/p/hay-su-dung-eslint-cho-du-an-cua-ban-bJzKm07O59N)
