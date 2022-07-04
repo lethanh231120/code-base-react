@@ -1,10 +1,10 @@
 # DESCEN SPACE FRONT END DOCS
 
-## Libaries and technologies: 
+## Libraries and technologies: 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Libraries: React-router-dom (for navigate), Redux + Redux-toolkits( for state mangement), Axios (Apis), Antd + SASS(UI),... 
+Libraries: React-router-dom (for navigate), Redux + Redux-toolkits(for state mangement), Axios (Apis), Antd + SASS(UI),... 
 
 ## Coding Convetion:
 Tool: ESLINT. More information: [Here](https://viblo.asia/p/hay-su-dung-eslint-cho-du-an-cua-ban-bJzKm07O59N)
@@ -42,6 +42,7 @@ Authorization header is a component of JWT (including 3 components: Header(1) , 
 For APIs that require user permissions, the SPA will check in the cookie if there is a JWT payload that will process the request, otherwise it will back to login.
 
 **Handle Api Function :** An async function, use Try Catch Await Function to handle Error during coding process. 
+
 `POST Method:` Post new data to Api. Take 2 parameters: Api address and new Data ( Object Form or other data,such as: images,videos,...) 
 
 `GET Method:` Get data from Api. Take 2 parameters: Api address and params( Usually added to Api)
