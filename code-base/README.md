@@ -95,7 +95,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 `Step 1:` Clone project at address https://github.com/lethanh231120/code-base-react.git
 
-`Step 2:` Open cmd ( on Window ) or Terminal ( on MacOS )
+`Step 2:` Open cmd ( on Window ) or Terminal ( on MacOS ) and access to location, which peer to Dockerfile
 
 `Step 3:` ``` docker build .```
 
