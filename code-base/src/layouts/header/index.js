@@ -1,8 +1,15 @@
-import React, { useSelector,useState } from 'react'
+import React, { useState } from 'react'
 import { Menu, Modal, Typography } from 'antd'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { Layout } from 'antd'
 import 'antd/dist/antd.min.css'
+import SignIn from '../../pages/auth/login'
+import { Signup } from '../../pages/auth/register'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeCookie, STORAGEKEY } from '../../utils/storage'
+import { resetUserInfo } from '../../redux/useInfo'
+import { get } from '../../api/BaseRequest'
+
 const { Header } = Layout
 
 const items = [
@@ -38,9 +45,17 @@ const Navbar = () => {
   const [isModalSignin, setIsModalSignin] = useState(false)
   const [isModalSignup, setIsModalSignup] = useState(false)
   const { user, isAuthenticated } = useSelector(state => state.userInfo)
-
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const onClick = (e) => {
     setCurrent(e.key)
+  }
+
+  const logout = async() => {
+    await removeCookie(STORAGEKEY.ACCESS_TOKEN)
+    await get('user/logout')
+    dispatch(resetUserInfo())
+    navigate('/')
   }
 
   return (
@@ -88,7 +103,7 @@ const Navbar = () => {
             </Typography>
             <Typography
               variant='subtitle1'
-              // onClick={logout}
+              onClick={logout}
               className=' header__link'
               style={{ color: '#fff' }}
             >
@@ -107,6 +122,7 @@ const Navbar = () => {
       </Layout>
       <Modal
         visible={isModalSignin}
+        footer={null}
         onOk={() => setIsModalSignin(false)}
         onCancel={() => setIsModalSignin(false)}
       >
@@ -114,6 +130,7 @@ const Navbar = () => {
       </Modal>
       <Modal
         visible={isModalSignup}
+        footer={null}
         onOk={() => setIsModalSignup(false)}
         onCancel={() => setIsModalSignup(false)}
       >

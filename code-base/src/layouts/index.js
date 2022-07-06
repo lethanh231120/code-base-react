@@ -7,6 +7,9 @@ import PortfolioPage from '../pages/portfolio'
 import SwapPage from '../pages/swap'
 import Cryptocurrencies from '../pages/cryptocurrencies'
 import PricingPage from '../pages/price'
+import ProfilePage from '../pages/profile'
+import EditProfilePage from '../pages/profile/edit-profile'
+import PageNotFound from '../pages/404'
 import { Layout } from 'antd'
 import './header/index.scss'
 const { Content } = Layout
@@ -22,8 +25,10 @@ const Router = () => {
           <Route path='cryptocurrencies' element={<Cryptocurrencies />} />
           <Route path='price' element={<PricingPage />} />
           <Route path='blog' element={<Blogs />} />
+          <Route path='profile' element={<ProfilePage />} />
+          <Route path='edit-profile' element={<EditProfilePage />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
-
       </Content>
     </>
   )

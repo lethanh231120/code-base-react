@@ -6,7 +6,8 @@ import { useDispatch } from 'react-redux'
 import { getUserInfo } from '../../../redux/useInfo'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-export default function SignIn({ setIsModalVisible }) {
+import { validateEmail } from '../../../utils/regex'
+export default function SignIn({ setIsModalSignin }) {
   const [error, setError] = useState()
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -22,7 +23,7 @@ export default function SignIn({ setIsModalVisible }) {
       if (data.token) {
         await setCookie(STORAGEKEY.ACCESS_TOKEN, data.token)
         await dispatch(getUserInfo())
-        setIsModalVisible(false)
+        setIsModalSignin(false)
         if (data.isAdmin === true) {
         //   navigate('../admin')
         } else {
@@ -62,7 +63,8 @@ export default function SignIn({ setIsModalVisible }) {
             {
               required: false,
               type: 'email',
-              message: 'Enter a valid email address!'
+              message: 'Enter a valid email address!',
+              pattern: new RegExp(validateEmail)
             }
           ]}
         >
@@ -75,7 +77,8 @@ export default function SignIn({ setIsModalVisible }) {
           rules={[
             {
               required: true,
-              message: 'Please input your password!'
+              message: 'Mật khẩu bao gồm cả chữ hoa, chữ thường, số và ít nhất 8 kỹ tự!'
+              // pattern: new RegExp(validatePassword)
             }
           ]}
         >
