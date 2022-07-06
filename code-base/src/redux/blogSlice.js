@@ -28,4 +28,5 @@ const blogsSlice = createSlice({
     }
   }
 })
+
 export default blogsSlice.reducer

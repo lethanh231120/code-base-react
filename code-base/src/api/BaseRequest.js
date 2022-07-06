@@ -5,7 +5,7 @@ const getUrlPrefix = () => '/'
 
 const instance = axios.create({
 //   baseURL: process.env.BASE_URL_API
-  baseURL: 'https://do-an-tot-nghiep-lvthanh.herokuapp.com/api'
+  baseURL: 'http://localhost:5000/api'
 })
 
 const token = getCookie(STORAGEKEY.ACCESS_TOKEN)
@@ -15,10 +15,10 @@ if (token) {
 }
 
 const get = async(url, params = {}) => {
-  // const token = getCookie(STORAGEKEY.ACCESS_TOKEN)
-  // if (token) {
-  //   instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
-  // }
+  const token = getCookie(STORAGEKEY.ACCESS_TOKEN)
+  if (token) {
+    instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  }
   try {
     const config = { params: params }
     const response = await instance.get(getUrlPrefix() + url, config)
