@@ -1,4 +1,4 @@
-# DESCEN SPACE FRONT END DOCS
+# DECENT SPACE FRONT END DOCS
 
 ## Libraries and technologies: 
 

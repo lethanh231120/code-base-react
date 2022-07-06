@@ -8,7 +8,7 @@ const Blogs = () => {
   let listBlog = []
   useEffect(() => {
     dispatch(getBlogs({ page: 1, pageSize: 10 }))
-  }, [])
+  }, [dispatch])
 
   if (blogs.blogs) {
     listBlog = blogs.blogs
